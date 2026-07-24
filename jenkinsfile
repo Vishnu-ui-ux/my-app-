@@ -1,3 +1,5 @@
+Update Jenkinsfile
+
 pipeline {
     agent any
 
@@ -42,15 +44,13 @@ pipeline {
 
                     sh '''
                     aws ecs update-service \
-                    --cluster my-cluster \
-                    --service my-service \
+                    --cluster New-Cluster \
+                    --service MY-SERVICE \
                     --force-new-deployment \
-                    --region us-east-1
+                    --region us-east-1	
                     '''
                 }
             }
         }
     }
 }
-
- 
